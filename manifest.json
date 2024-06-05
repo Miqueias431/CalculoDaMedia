@@ -1,0 +1,19 @@
+{
+  "name": "Progressive Web app",
+  "short_name": "PWA",
+  "start_url": "/CalculoDaMedia/",
+  "display": "standalone",
+  "orientation":"portrait",
+  "icons": [
+    {
+      "src": "escola192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "escola512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
