@@ -3,6 +3,7 @@
  * @author Miqueias Rodrigues
  */
 
+import 'sw.js'
 function calcularStatus() {
     // Obter os valores das notas do aluno
     let nota1 = parseFloat(document.getElementById('nota1').value)
