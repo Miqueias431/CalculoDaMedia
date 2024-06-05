@@ -13,7 +13,7 @@ const urlsToCache = [
   '/escola192.png',
   '/escola512.png',
   '/style.css',
-  '/media.js'
+  '/img'
 ]
 
 // Instalando o Service Worker e armazenando os arquivos no cache
