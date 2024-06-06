@@ -5,74 +5,52 @@
 
 function calcularStatus() {
     // Obter os valores das notas do aluno
-    let nota1 = parseFloat(document.getElementById('nota1').value)
-    let nota2 = parseFloat(document.getElementById('nota2').value)
-    let nota3 = parseFloat(document.getElementById('nota3').value)
-    let nota4 = parseFloat(document.getElementById('nota4').value)
+    let nota1 = parseFloat(document.getElementById('nota1').value);
+    let nota2 = parseFloat(document.getElementById('nota2').value);
+    let nota3 = parseFloat(document.getElementById('nota3').value);
+    let nota4 = parseFloat(document.getElementById('nota4').value);
   
     if (!nota1 || !nota2 || !nota3 || !nota4) {
-        document.getElementById('status').textContent = ''
-        document.getElementById('imgStatus').src = 'img/inicio.png'
-        document.getElementById('notaCount').textContent = ''
+        document.getElementById('status').textContent = '';
+        document.getElementById('imgStatus').src = 'img/inicio.png';
+        document.getElementById('notaCount').textContent = '';
+        document.getElementById('mediaNota').textContent = ''; // Limpar a média
         return;
     }
   
     // Calcular a média das notas
     let media = (nota1 + nota2 + nota3 + nota4) / 4;
   
-    // Obter o elemento de status para atualizar
-    let statusElement = document.getElementById('status')
-    let imgElement = document.getElementById('imgStatus') // Obtendo o elemento da imagem
-    let notaCountElement = document.getElementById('notaCount')
+    // Obter os elementos para atualizar
+    let statusElement = document.getElementById('status');
+    let imgElement = document.getElementById('imgStatus'); // Obtendo o elemento da imagem
+    let notaCountElement = document.getElementById('notaCount');
+    let mediaNotaElement = document.getElementById('mediaNota'); // Novo elemento para a média
   
     // Verificar a média e definir o status
     if (media >= 6) {
-        statusElement.textContent = 'APROVADO'
-        imgElement.src = 'img/aprovado.png'
+        statusElement.textContent = 'APROVADO';
+        imgElement.src = 'img/aprovado.png';
     } else if (media <= 4) {
-        statusElement.textContent = 'REPROVADO'
-        imgElement.src = 'img/reprovado.png'
+        statusElement.textContent = 'REPROVADO';
+        imgElement.src = 'img/reprovado.png';
     } else {
-        statusElement.textContent = 'RECUPERAÇÃO'
-        imgElement.src = 'img/recuperacao.png'
+        statusElement.textContent = 'RECUPERAÇÃO';
+        imgElement.src = 'img/recuperacao.png';
     }
 
-    // Contar a quantidade de notas
-    let notaCount = 0
-    if (nota1) {
-        notaCount++
-    }
-    if (nota2) {
-        notaCount++
-    }
-    if (nota3) {
-        notaCount++
-    }
-    if (nota4) {
-        notaCount++
-    }
-
-    // Atualizar o elemento de contagem de notas
-
-    if (notaCount === 0) {
-        imgElement.src = 'img/inicio.png'
-        statusElement.textContent = ''
-        notaCountElement.textContent = ''
-        return;
-    }
-
-    notaCountElement.textContent = `Notas: ${notaCount}`
+    notaCountElement.textContent = `Notas: ${nota1}, ${nota2}, ${nota3}, ${nota4}`;
+    mediaNotaElement.textContent = `Média: ${media.toFixed(2)}`; // Exibir a média com 2 casas decimais
   
     let btnLimpar = document.getElementById('btnLimpar');
   
     btnLimpar.addEventListener('click', () => {
-        imgStatus.src = 'img/inicio.png'
-        statusElement.textContent = ''
-        notaCountElement.textContent = ''
-    })
+        imgStatus.src = 'img/inicio.png';
+        statusElement.textContent = '';
+        notaCountElement.textContent = '';
+        mediaNotaElement.textContent = ''; // Limpar a média
+    });
+}
   
-  }
-  
-  // Chamar a função quando o botão for clicado
-  document.getElementById('btnCalcular').addEventListener('click', calcularStatus)
-  
+// Chamar a função quando o botão for clicado
+document.getElementById('btnCalcular').addEventListener('click', calcularStatus);
