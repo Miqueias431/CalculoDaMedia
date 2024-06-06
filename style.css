@@ -7,13 +7,21 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 1.5em;
-    margin: 20px 0;
+    font-size: 1.2em;
+    margin: 15px 0;
 
+}
+
+h2 {   
+    text-align: center;
+    font-size: 1.2em;
+    margin: 15px 0;
 }
 
 img {
     margin-bottom: 20px;
+    width: 150px;
+    height: 150px;  
 }
 
 .container {
@@ -33,10 +41,6 @@ img {
 .imgparte1 {
     display: flex;
     justify-content: center;
-}
-
-.container img {
-    max-width: 100%;
 }
 
 .caixa {
