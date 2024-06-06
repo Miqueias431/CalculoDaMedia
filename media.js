@@ -22,7 +22,7 @@ function calcularStatus() {
         statusElement.textContent = 'APROVADO';
         imgElement.src = 'img/aprovado.png';
     } else if (media <= 4) {
-        statusElement.textContent = 'REPROVADO'; 
+        statusElement.textContent = 'REPROVADO';
         imgElement.src = 'img/reprovado.png';
     } else {
         statusElement.textContent = 'RECUPERAÇÃO';

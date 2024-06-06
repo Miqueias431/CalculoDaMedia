@@ -3,7 +3,7 @@
   "short_name": "PWA",
   "start_url": "/CalculoDaMedia/",
   "display": "standalone",
-  "orientation":"portrait",
+  "orientation": "portrait",
   "lang": "pt-BR",
   "icons": [
     {
