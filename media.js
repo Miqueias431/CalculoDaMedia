@@ -13,6 +13,7 @@ function calcularStatus() {
     if (!nota1 || !nota2 || !nota3 || !nota4) {
         document.getElementById('status').textContent = ''
         document.getElementById('imgStatus').src = 'img/inicio.png'
+        document.getElementById('notaCount').textContent = ''
         return;
     }
   
@@ -22,6 +23,7 @@ function calcularStatus() {
     // Obter o elemento de status para atualizar
     let statusElement = document.getElementById('status')
     let imgElement = document.getElementById('imgStatus') // Obtendo o elemento da imagem
+    let notaCountElement = document.getElementById('notaCount')
   
     // Verificar a média e definir o status
     if (media >= 6) {
@@ -34,6 +36,13 @@ function calcularStatus() {
         statusElement.textContent = 'RECUPERAÇÃO'
         imgElement.src = 'img/recuperacao.png'
     }
+
+    let notaCount = 0
+    if (nota1) notaCount++
+    if (nota2) notaCount++
+    if (nota3) notaCount++
+    if (nota4) notaCount++
+    notaCountElement.textContent = `Notas: ${notaCount}`
   
     let btnLimpar = document.getElementById('btnLimpar');
   
