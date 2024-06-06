@@ -5,6 +5,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "lang": "pt-BR",
+  "background-color": "#f4f4f4",
   "icons": [
     {
       "src": "escola192.png",
