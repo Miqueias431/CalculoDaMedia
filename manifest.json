@@ -4,6 +4,7 @@
   "start_url": "/CalculoDaMedia/",
   "display": "standalone",
   "orientation":"portrait",
+  "lang": "pt-BR",
   "icons": [
     {
       "src": "escola192.png",
@@ -15,6 +16,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#4CAF50"
+  ]
 }
