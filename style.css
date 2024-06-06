@@ -44,9 +44,9 @@ img {
 }
 
 .caixa {
-    width: 300px;
+    width: 280px;
     padding: 8px;
-    margin: 10px 0;
+    margin: 8px 0;
     font-size: 1em;
 }
 
@@ -54,6 +54,10 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#mediaNota {
+    margin: 10px 0;
 }
 
 #btnCalcular {
