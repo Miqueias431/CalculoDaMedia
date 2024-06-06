@@ -39,7 +39,7 @@ function calcularStatus() {
         imgElement.src = 'img/recuperacao.png'
     }
 
-    notaCountElement.textContent = `Notas: ${nota1}, ${nota2}, ${nota3}, ${nota4}`
+    // notaCountElement.textContent = `Notas: ${nota1}, ${nota2}, ${nota3}, ${nota4}`
     mediaNotaElement.textContent = `Média: ${media.toFixed(2)}`
 
     let btnLimpar = document.getElementById('btnLimpar')
