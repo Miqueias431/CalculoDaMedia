@@ -46,7 +46,7 @@ function calcularStatus() {
     btnLimpar.addEventListener('click', () => {
         imgStatus.src = 'img/inicio.png'
         statusElement.textContent = ''
-        notaCountElement.textContent = ''
+        // notaCountElement.textContent = ''
         mediaNotaElement.textContent = ''
     })
   
