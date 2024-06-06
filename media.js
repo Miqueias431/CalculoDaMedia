@@ -44,10 +44,10 @@ function calcularStatus() {
 
     let btnLimpar = document.getElementById('btnLimpar')
     btnLimpar.addEventListener('click', () => {
-        imgStatus.src = 'img/inicio.png'
         statusElement.textContent = ''
-        // notaCountElement.textContent = ''
         mediaNotaElement.textContent = ''
+        imgStatus.src = 'img/inicio.png'
+        // notaCountElement.textContent = ''
     })
   
   }
