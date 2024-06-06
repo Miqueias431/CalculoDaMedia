@@ -4,7 +4,7 @@ const cachePWA = 'cache-v1';
 // Todos os arquivos devem ser add ao vetor (exceto o manifesto)
 const urlsToCache = [
   '/',
-  '/index.html',
+  '/index.html',  
   '/escola192.png',
   '/escola512.png',
   '/style.css',
