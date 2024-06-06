@@ -24,7 +24,7 @@ function calcularStatus() {
     // Obter o elemento de status para atualizar
     let statusElement = document.getElementById('status')
     let imgElement = document.getElementById('imgStatus') // Obtendo o elemento da imagem
-    let notaCountElement = document.getElementById('notaCount')
+    // let notaCountElement = document.getElementById('notaCount')
     let mediaNotaElement = document.getElementById('mediaNota')
   
     // Verificar a média e definir o status
