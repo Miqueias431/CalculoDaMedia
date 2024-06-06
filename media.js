@@ -37,11 +37,30 @@ function calcularStatus() {
         imgElement.src = 'img/recuperacao.png'
     }
 
+    // Contar a quantidade de notas
     let notaCount = 0
-    if (nota1) notaCount++
-    if (nota2) notaCount++
-    if (nota3) notaCount++
-    if (nota4) notaCount++
+    if (nota1) {
+        notaCount++
+    }
+    if (nota2) {
+        notaCount++
+    }
+    if (nota3) {
+        notaCount++
+    }
+    if (nota4) {
+        notaCount++
+    }
+
+    // Atualizar o elemento de contagem de notas
+
+    if (notaCount === 0) {
+        imgElement.src = 'img/inicio.png'
+        statusElement.textContent = ''
+        notaCountElement.textContent = ''
+        return;
+    }
+
     notaCountElement.textContent = `Notas: ${notaCount}`
   
     let btnLimpar = document.getElementById('btnLimpar');
