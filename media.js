@@ -41,21 +41,23 @@ function calcularStatus() {
 
     // notaCountElement.textContent = `Notas: ${nota1}, ${nota2}, ${nota3}, ${nota4}`
     mediaNotaElement.textContent = `Média: ${media.toFixed(2)}`
-
-    let btnLimpar = document.getElementById('btnLimpar')
-    btnLimpar.addEventListener('click', () => {
-        statusElement.textContent = ''
-        mediaNotaElement.textContent = ''
-        imgElement.src = 'img/inicio.png'
-        // notaCountElement.textContent = ''
-        document.getElementById('nota1').value = ''
-        document.getElementById('nota2').value = ''
-        document.getElementById('nota3').value = ''
-        document.getElementById('nota4').value = ''
-    })
   
+  }
+
+  function limparCampos(){
+    document.getElementById('nota1').value = ''
+    document.getElementById('nota2').value = ''
+    document.getElementById('nota3').value = ''
+    document.getElementById('nota4').value = ''
+
+    document.getElementById('status').textContent = ''
+    document.getElementById('imgStatus').src = 'img/inicio.png'
+    // document.getElementById('notaCount').textContent = ''
+    document.getElementById('mediaNota').textContent = ''
   }
   
   // Chamar a função quando o botão for clicado
   document.getElementById('btnCalcular').addEventListener('click', calcularStatus)
+
+  document.getElementById('btnLimpar').addEventListener('click', limparCampos)
   
