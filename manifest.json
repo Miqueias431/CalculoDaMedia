@@ -1,6 +1,6 @@
 {
-  "name": "Progressive Web app",
-  "short_name": "PWA",
+  "name": "CalculoDaMedia",
+  "short_name": "CalculoDaMedia",
   "start_url": "/CalculoDaMedia/",
   "display": "standalone",
   "orientation": "portrait",

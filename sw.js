@@ -1,5 +1,5 @@
 // Nome do cache (Controle de versão)
-const cachePWA = 'cache-v1';
+const cacheCalculodaMedia= 'cache-v2';
 // Arquivos a serem armazenados em cache
 // Todos os arquivos devem ser add ao vetor (exceto o manifesto)
 const urlsToCache = [
