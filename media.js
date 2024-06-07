@@ -49,17 +49,13 @@ function calcularStatus() {
         statusElement.textContent = '';
         mediaNotaElement.textContent = '';
         imgElement.src = 'img/inicio.png';
-        // notaCountElement.textContent = '';
-        document.getElementById('nota1').value = '';
-        document.getElementById('nota2').value = '';
-        document.getElementById('nota3').value = '';
-        document.getElementById('nota4').value = '';
     });
 
   
   // Chamar a função quando o botão for clicado
   document.getElementById('btnCalcular').addEventListener('click', calcularStatus)
 
+  
 
   
 
