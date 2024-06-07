@@ -11,7 +11,7 @@ function calcularStatus() {
     let nota4 = parseFloat(document.getElementById('nota4').value)
   
     if (!nota1 || !nota2 || !nota3 || !nota4) {
-        document.getElementById('status').textContent = ''
+        document.getElementsByClassName('status').textContent = ''
         document.getElementById('imgStatus').src = 'img/inicio.png'
         document.getElementById('notaCount').textContent = ''
         document.getElementById('mediaNota').textContent = ''
@@ -22,7 +22,7 @@ function calcularStatus() {
     let media = (nota1 + nota2 + nota3 + nota4) / 4;
   
     // Obter o elemento de status para atualizar
-    let statusElement = document.getElementById('status')
+    let statusElement = document.getElementsByClassName('status')
     let imgElement = document.getElementById('imgStatus') // Obtendo o elemento da imagem
     // let notaCountElement = document.getElementById('notaCount')
     let mediaNotaElement = document.getElementById('mediaNota')
@@ -41,21 +41,17 @@ function calcularStatus() {
 
     // notaCountElement.textContent = `Notas: ${nota1}, ${nota2}, ${nota3}, ${nota4}`
     mediaNotaElement.textContent = `Média: ${media.toFixed(2)}`
-
-    let btnLimpar = document.getElementById('btnLimpar');
-    btnLimpar.addEventListener('click', () => {
-        statusElement.textContent = '';
-        mediaNotaElement.textContent = '';
-        imgElement.src = 'img/inicio.png';
-    });
   
   }
-
-  
-
   
   // Chamar a função quando o botão for clicado
   document.getElementById('btnCalcular').addEventListener('click', calcularStatus)
+
+  document.getElementById('btnLimpar').addEventListener('click', () => { 
+    document.getElementsByClassName('status').textContent = '';
+    document.getElementById('imgStatus').src = 'img/inicio.png';
+    document.getElementById('mediaNota').textContent = '';
+  });
 
   
 
